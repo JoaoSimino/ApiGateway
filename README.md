@@ -9,8 +9,6 @@
 - [Funcionalidades](#funcionalidades)
 - [Pré-requisitos](#pré-requisitos)
 - [Como rodar](#como-rodar)
-- [Testes](#testes)
-- [Documentação da API](#documentação-da-api)
 - [Contribuindo](#contribuindo)
 - [Pipeline CI/CD](#pipeline-cicd)
 - [Licença](#licença)
@@ -77,26 +75,8 @@ dotnet run
 
 A API estará disponível em `http://localhost:5000` (ou porta configurada).
 
-## Testes
+Certifique-se de que os serviços CreditScoringEngine e BillingService estejam rodando nas portas configuradas em appsettings.json.
 
-Para rodar todos os testes:
-
-```bash
-dotnet test ApiGateway.sln --configuration Release --verbosity normal
-```
-
-Os testes utilizam banco InMemory para isolamento total.
-
-## Documentação da API
-
-A API está configurada com Swagger UI para facilitar testes e visualização da documentação.  
-Acesse `http://localhost:5000/swagger` após rodar a aplicação.
-
-Exemplo de requisição curl para listar Clientes:
-
-```bash
-curl -X GET http://localhost:5000/api/Cliente
-```
 
 ## Contribuindo
 
