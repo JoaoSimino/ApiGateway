@@ -57,7 +57,7 @@ jobs:
 
 
       - name: Build Docker image
-        run: docker build -f ./ApiGateway/Docker/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/apigateway-api:latest .
+        run: docker build -f ./Docker/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/apigateway-api:latest .
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/apigateway-api:latest 
