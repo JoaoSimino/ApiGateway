@@ -2,11 +2,11 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 COPY *.sln ./
-COPY ApiGateway/*.csproj ./ApiGateway/
+COPY *.csproj ./ApiGateway/
 RUN dotnet restore
 
 COPY . .
-RUN dotnet publish ApiGateway/ApiGateway.csproj -c Release -o /app/publish
+RUN dotnet publish ApiGateway.csproj -c Release -o /app/publish
 
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
